@@ -1,0 +1,405 @@
+@font-face {
+    font-family: Gilroy-Black;
+    src: url(Assets/Font/Gilroy-Black.ttf);
+}
+
+
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url(Assets/Font/Gilroy-Bold.ttf);
+}
+
+
+@font-face {
+    font-family: Gilroy-ExtraBold;
+    src: url(Assets/Font/Gilroy-ExtraBold.ttf);
+}
+
+
+@font-face {
+    font-family: Gilroy-Heavy;
+    src: url(Assets/Font/Gilroy-Heavy.ttf);
+}
+
+
+@font-face {
+    font-family: Gilroy-Light;
+    src: url(Assets/Font/Gilroy-Light.ttf);
+}
+
+
+@font-face {
+    font-family: Gilroy-Medium;
+    src: url(Assets/Font/Gilroy-Medium.ttf);
+}
+
+
+@font-face {
+    font-family: Gilroy-SemiBold;
+    src: url(Assets/Font/Gilroy-SemiBold.ttf);
+}
+
+
+@font-face {
+    font-family: Gilroy-Thin;
+    src: url(Assets/Font/Gilroy-Thin.ttf);
+}
+
+
+@font-face {
+    font-family: Gilroy-UltraLight;
+    src: url(Assets/Font/Gilroy-UltraLight.ttf);
+}
+
+
+
+:root {
+    --darkblue: #121E48;
+    --white: #FFFFFF;
+    --lightwhite: #EBEBEB;
+    --gray: #767676;
+    --lightblack: #12141D;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Gilroy-Medium , Arial,  sans-serif;
+}
+
+
+body {
+    background-color: #E4E7ED;
+}
+
+svg,
+img {
+    height: 100%;
+    width: 100%;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+.side-bar {
+    width: 243px;
+    background-color: var(--white);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.logo>div {
+    width: 120px;
+    height: 29.45px;
+    margin-inline: auto;
+}
+
+.logo {
+    padding-block: 40px;
+}
+
+.links {
+    width: 100%;
+    padding-block: 40px;
+    border-block: 2px solid #E4E7ED;
+}
+
+.links>li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.links>li {
+    display: flex;
+    align-items: center;
+    padding-inline: 8px;
+    border-radius: 8px;
+}
+
+
+.links a>div {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.links a {
+    width: 100%;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 12px 0 12px 24px;
+    border-radius: 8px;
+}
+
+.links a>span {
+    color: var(--gray);
+}
+
+
+.links a:hover {
+    background-color: #1CD2AD1A;
+}
+
+.links a:hover span {
+    color: #1CD2AD;
+    font-family: Gilroy-SemiBold;
+}
+
+.links a:hover svg path {
+    fill: #1CD2AD;
+}
+
+
+
+.bottom-links {
+    padding-block: 40px;
+    border: none;
+}
+
+
+
+.header-section {
+    background-color: var(--darkblue);
+    width: calc(100% - 243px);
+    margin-left: auto;
+    padding-inline: 20px;
+    padding-top: 32px;
+}
+
+.header-section>header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-section>header>p {
+    color: white;
+    font-family: Gilroy-Light;
+    font-size: 20px;
+}
+
+.header-section p>span {
+    color: #1CD2AD;
+}
+
+.header-section input {
+    display: block;
+    width: 214px;
+    background-color: #FFFFFF1A;
+    border-radius: 100px;
+    border: none;
+    padding: 10px 16px 10px 36px;
+    color: var(--white);
+}
+
+.header-section input:focus {
+    outline: none;
+}
+
+.header-section input::placeholder {
+    color: var(--white);
+}
+
+.header-section>header>div span {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+}
+
+.header-section search {
+    position: relative;
+}
+
+
+.bell-icon {
+    padding: 8px;
+    background-color: #FFFFFF1A;
+    border-radius: 100px;
+}
+
+.bell-icon>div {
+    height: 20px;
+    width: 20px;
+}
+
+.header-section>header>div {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+
+.profile-pic {
+    height: 35px;
+    width: 35px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+
+.finance-overview {
+    margin-top: 64px;
+}
+
+.finance-overview>h1 {
+    font-size: 24px;
+    font-family: Gilroy-SemiBold;
+    color: var(--white);
+}
+
+.finance-details {
+    display: flex;
+    gap: 25px;
+}
+
+.finance-details>div {
+    flex-grow: 1;
+    background-color: var(--lightwhite);
+    border-radius: 8px;
+    background-color: #F5F5F5;
+    color: var(--gray);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -50px;
+    margin-top: 30px;
+}
+
+.finance-details>div>span {
+    color: black;
+    font-size: 20px;
+    font-family: Gilroy-SemiBold;
+}
+
+.finance-details>div>p {
+    margin-block: 10px;
+}
+
+.finance-details>div>:last-child {
+    height: 38px;
+    width: 48px;
+    position: absolute;
+    right: 20px;
+    bottom: -3px;
+}
+
+.project-details {
+    margin-left: auto;
+    margin-block: 70px 25px;
+    width: calc(100% - 243px);
+}
+
+
+.project-details>div {
+    margin-inline: 20px;
+    background-color: var(--white);
+    border-radius: 16px;
+    padding-top: 20px;
+    padding-inline: 20px;
+}
+
+.project-details>div>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-details table {
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.project-details div>button {
+    border-radius: 10px;
+    padding: 8px 12px;
+    background-color: #1CD2AD;
+    color: var(--white);
+    border: none;
+    font-weight: 700;
+}
+
+.project-details table th {
+    border-bottom: 2px solid #E4E7ED;
+}
+
+.project-details table td {
+    padding: 16px;
+    color: #8E90A6;
+    font-family: Gilroy-SemiBold;
+}
+
+.project-details table tbody tr>:nth-child(2),
+.project-details table tbody tr>:nth-child(3) {
+    font-family: Gilroy-Light;
+}
+
+.project-details table th {
+    padding: 16px;
+}
+
+
+.project-details table>tbody>:nth-child(odd) {
+    background-color: #F9FBFB;
+}
+
+.project-details table button {
+    border-radius: 20px;
+    padding: 4px 24px;
+    border: none;
+    width: 100%;
+    background-color: #E5F7FB;
+    color: #18C3D9;
+    font-weight: 1000;
+}
+
+
+
+.events {
+    width: calc(100% - 243px);
+    margin-left: auto;
+    margin-block: 25px;
+}
+
+.events>div {
+    padding: 20px;
+    margin-inline: 20px;
+    background-color: var(--white);
+    border-radius: 9px;
+    padding-inline: 20px;
+    width: fit-content;
+    height: 332px;
+    overflow-y: scroll;
+}
+
+.events-list{
+    margin-top: 20px;
+}
+
+.events-list div>div:has(img){
+    height: 48px;
+    width: 48px;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.events-list>div{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.events-list span{
+    color: #8E90A6;
+    font: 1000 14px Gilroy-Thin;
+}
